@@ -73,7 +73,7 @@ hw1/
 │ ├── chandler.json # реплики Чандлера с контекстом   
 │ ├── other.json # реплики персонажей других вселенных с контекстом  
 │ └── dialogs.json # диалоги для Flask-инференса могут быть заменены на любые аналогичной структуры  
-├── models/ # Сохранённые модели (Bi-Encoder, Cross-Encoder) доступны по [ссылке]()   
+├── models/ # Сохранённые модели (Bi-Encoder, Cross-Encoder) доступны по [ссылке](https://disk.yandex.ru/d/WigCN0l2PrsCGg)   
 ├── chatbot/   
 │ ├── requirements.txt # Зависимости проекта   
 │ ├── dockerfile # Конфигурация контейцнера Flask  
