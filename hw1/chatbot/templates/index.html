@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Выбор персонажа</title>
+    <style>
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        select, button {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Выберите собеседника</h1>
+        <form method="POST">
+            <select name="character" required>
+                <option value="" disabled selected>-- Выберите персонажа --</option>
+                {% for character in characters %}
+                <option value="{{ character }}">{{ character }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <button type="submit">Начать диалог</button>
+        </form>
+    </div>
+</body>
+</html>
