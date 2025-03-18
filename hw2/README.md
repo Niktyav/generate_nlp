@@ -45,8 +45,9 @@ hw1/
 ├── img/ # Графики и иллюстрации   
 │ ├── gradio.jpg # Пример диалога  
 │ ├── llama_cpp.jpg # пример диалога   
-│ ├── biencoder_learning.jpg # График сходимости Bi-Encoder   
-│ └── crossencoder_learning.jpg# График сходимости Cross-Encoder    
+│ ├── flask.jpg # пример диалога   
+│ ├── train_loss.jpg # График сходимости    
+│ └── eval_loss.jpg# График сходимости    
 ├── docker-compose.yml # Файл для контейнеризации (Flask, Llama.cpp и т.д.)    
 ├── friends_generate.ipynb # Ноутбук с кодом предобработки данных, обучением моделей и инференсом в gradio   
 └── README.md # Отчёт (данный файл)   
@@ -76,6 +77,31 @@ hw1/
 После обучения модель была интегрирована в простой веб-интерфейс с помощью Gradio. Это позволяет общаться с чат-ботом через браузер и в ноутбуке.   
 ![validation loss](./img/gradio.jpg)  
 
+# Веб-сервис(Docker-compose)
+
+После обучения модель была произведена интеграция адаптера в основную модель и потом прозведена конвертация в gguf-формат с помощью утилит convert репозитория LLAMA.CPP(https://github.com/ggml-org/llama.cpp). LLAMA.CPP написана на C++, что позволяет значительно ускорять инференс моделей.и позволяет работать с различными типами Open-source моделей используя API от OpenAI. Так же Llama.cpp сервер имеет web-интерфейс который позволяет вести диалог с моделью   
+![Flask](./img/flask.jpg)  
+![llama_cpp](./img/llama_cpp.jpg)  
+
+# Запуск проекта 
+
+### Предварительные требования
+- Docker 24.0+
+- Docker Compose 2.20+
+- NVIDIA GPU (рекомендуется)
+
+### Инструкция:
+```bash
+# Клонировать репозиторий
+git clone https://github.com/Niktyav/generate_nlp.git
+cd generate_nlp/hw1
+
+# Собрать контейнеры
+docker-compose build
+
+# Запустить контейнеры
+docker-compose up -d 
+```
 
 # Выводы
 
