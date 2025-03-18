@@ -9,11 +9,11 @@
 
 # Структура репозитория
 
-hw1/   
+hw2/   
 ├── data/    
 │ ├── other/ # сценарии фильмов    
 │ └── friends.csv  # датасет реплик друзей   
-├── models/ # Сохранённые модели ( llama-3.1-8b-chat-chandler и доступны по [ссылке](https://disk.yandex.ru/d/WigCN0l2PrsCGg)   
+├── models/ # Сохранённые модели ( llama-3.1-1b-chat-chandler и доступны по [ссылке](https://disk.yandex.ru/d/WigCN0l2PrsCGg)   
 ├── chatbot/   
 │ ├── requirements.txt # Зависимости проекта   
 │ ├── dockerfile # Конфигурация контейнера Flask  
