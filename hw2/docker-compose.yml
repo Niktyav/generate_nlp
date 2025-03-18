@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  llamaserver:
+    image: ghcr.io/ggerganov/llama.cpp:server
+    container_name: llamaserver
+    restart: always
+    volumes:
+      - ./models:/models
+    command: >
+      -m /models/llama_chandler_1b_4q.gguf
+      --port 8000
+      --host 0.0.0.0
+      -n 64
+
+  chatbot:
+    build: ./chatbot
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./data:/app/data
+    restart: always
+    environment:
+      FLASK_PORT: 5000
+    depends_on:
+      - llamaserver
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001/"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
