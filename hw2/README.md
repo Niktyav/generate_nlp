@@ -13,7 +13,7 @@ hw2/
 ├── data/    
 │ ├── other/ # сценарии фильмов    
 │ └── friends.csv  # датасет реплик друзей   
-├── models/ # Сохранённые модели ( llama-3.1-1b-chat-chandler и доступны по [ссылке](https://disk.yandex.ru/d/WigCN0l2PrsCGg)   
+├── models/ # Сохранённые модели ( llama-3.1-1b-chat-chandler и доступны по [ссылке](https://disk.yandex.ru/d/RIAzYRXXG_k4-Q)   
 ├── chatbot/   
 │ ├── requirements.txt # Зависимости проекта   
 │ ├── dockerfile # Конфигурация контейнера Flask  
